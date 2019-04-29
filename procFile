@@ -1,0 +1,16 @@
+workdir: $GOPATH/src/github.com/joeblew99/runner_ex
+observe: *.go *.js
+ignore: /vendor
+formation: web=2 work=1
+
+build-worser: go build -o bin/worser workserver/main.go
+build-webser: go build -o bin/webser webserver/main.go
+
+#build-goser: go build -o bin/goser goserver/main.go
+#build-natser: go build -o bin/natser natserver/main.go
+
+work: restart=failure group=work ./bin/worser
+web: restart=always group=web ./bin/webser
+
+#go: restart=always waitfor=localhost:8080 ./bin/goser
+#nat: restart=fail waitfor=localhost:8082 ./bin/natser
