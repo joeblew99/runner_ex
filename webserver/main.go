@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"bitbucket.org/gedw99/centri/compute/runner/pkg"
+	"github.com/joeblew99/runner_ex/pkg"
 )
 
 func main() {

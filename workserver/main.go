@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"bitbucket.org/gedw99/centri/compute/runner/pkg"
+	"github.com/joeblew99/runner_ex/pkg"
 )
 
 var (
